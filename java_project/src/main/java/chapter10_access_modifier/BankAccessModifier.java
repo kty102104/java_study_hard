@@ -151,6 +151,5 @@ public class BankAccessModifier {
         System.out.println(accountHolder + "님의 계좌 번호는 " + accountNumber + "이며, 현재 잔액은 " + balance + "입니다.");
     }
 
-
 }
 
