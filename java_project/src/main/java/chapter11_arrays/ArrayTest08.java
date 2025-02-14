@@ -34,7 +34,7 @@ public class ArrayTest08 {
     }
 
     public static void main(String[] args) {
-
+        ArrayTest08 test = new ArrayTest08();   // 객체 생성해야 hasDuplicate 사용 가능
         Random random = new Random();
 //        int a = random.nextInt(45);           // random.nextInt(한계값) -> 0 ~ (한계값-1)까지의 int값을 반환
 //        System.out.println(a);  // 0 ~ 44까지 튀어나온다는 의미겠네요
@@ -62,7 +62,7 @@ public class ArrayTest08 {
 //                else {
 //                    lottoNumbers[j] = n;
 //                }
-                if (hasDuplicate)
+                if(test.hasDuplicate())
 
             }
             System.out.println(Arrays.toString(lottoNumbers));
