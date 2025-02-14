@@ -37,39 +37,34 @@ public class ArrayTest05 {
         Integer[] numbers = new Integer[10];
 
         for (int i = 0; i < 10; i++) {
-            numbers[i] = (int) (Math.random()*10 + 1);
+            numbers[i] = (int) (Math.random()*10) + 1;      // 1부터 10까지의 임의의 정수
         }
         // 전체 출력
         System.out.println(Arrays.toString(numbers));
-        // 10씩 곱해서 한줄에 출력
-        for (int number : numbers) {
-            System.out.print(number*10 + " ");
-        }
-        System.out.println();
         // 합 출력
         int sum = 0;
-        for (int number : numbers) {
-            sum += number;
-        }
-        System.out.println(sum);
         // 짝수의 합 출력
         int evenSum = 0;
+
         for (int number : numbers) {
+            // 10씩 곱해서 한줄에 출력
+            System.out.print(number*10 + " ");
+            sum += number;
             if (number % 2 == 0) {
                 evenSum += number;
             }
         }
+        System.out.println();
+        System.out.println(sum);
         System.out.println(evenSum);
+
         // 오름차순 출력
         Arrays.sort(numbers);
-        System.out.println(Arrays.toString(numbers));
+        System.out.println("오름 차순 정렬 : " + Arrays.toString(numbers));
+
         // 내림차순 출력
         Arrays.sort(numbers, Comparator.reverseOrder());
-        System.out.println(Arrays.toString(numbers));
-
-
-
-
+        System.out.println("내림 차순 정렬 : " + Arrays.toString(numbers));
 
     }
 }

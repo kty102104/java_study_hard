@@ -78,3 +78,8 @@ int b = 2;
 코드 블럭이나 파일의 변화가 있어야지만
 올릴 수 있습니다.
 
+git add .
+
+git commit -m "feat: ~ "
+
+git push
