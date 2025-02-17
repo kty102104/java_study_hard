@@ -36,6 +36,7 @@ public class ArrayTest08 {
     public static void main(String[] args) {
         ArrayTest08 test = new ArrayTest08();   // 객체 생성해야 hasDuplicate 사용 가능
         Random random = new Random();
+        int totalGame = 5;
 //        int a = random.nextInt(45);           // random.nextInt(한계값) -> 0 ~ (한계값-1)까지의 int값을 반환
 //        System.out.println(a);  // 0 ~ 44까지 튀어나온다는 의미겠네요
 //        int b = random.nextInt(46); // 이 경우 0번이 나올 수도 있겠네요
@@ -46,24 +47,28 @@ public class ArrayTest08 {
 
         System.out.println("이번 로또 당첨 번호는 다음과 같습니다.");
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < totalGame; i++) {
             for (int j = 0; j < 6; j++) {
                 duplicate = false;
                 int n = random.nextInt(45) + 1;
-//                for (int k = 0; k < j; k++) {
-//                    if (lottoNumbers[k] == n) {
-//                        duplicate = true;
-//                        break;
-//                    }
-//                }
-//                if(duplicate) {
+                for (int k = 0; k < j; k++) {
+                    if (lottoNumbers[k] == n) {
+                        duplicate = true;
+                        break;
+                    }
+                }
+                if(duplicate) {
+                    j--;
+                }
+                else {
+                    lottoNumbers[j] = n;
+                }
+//                if(test.hasDuplicate(lottoNumbers, n)) {
 //                    j--;
 //                }
 //                else {
 //                    lottoNumbers[j] = n;
 //                }
-                if(test.hasDuplicate())
-
             }
             System.out.println(Arrays.toString(lottoNumbers));
         }
