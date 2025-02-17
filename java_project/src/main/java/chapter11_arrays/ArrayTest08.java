@@ -70,13 +70,8 @@ public class ArrayTest08 {
 //                    lottoNumbers[j] = n;
 //                }
             }
+            Arrays.sort(lottoNumbers);
             System.out.println(Arrays.toString(lottoNumbers));
         }
-
-
-
-
-
-
     }
 }
