@@ -8,7 +8,6 @@ package chapter13_abstraction.interfaces;
 public abstract class Button implements Press, Up, Down{
     @Override
     public void onDown() {
-
     }
 
     @Override
@@ -16,7 +15,6 @@ public abstract class Button implements Press, Up, Down{
 
     @Override
     public void onUp() {
-
     }
 
 

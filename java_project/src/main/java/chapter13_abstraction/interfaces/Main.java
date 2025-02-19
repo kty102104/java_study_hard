@@ -53,8 +53,18 @@ public class Main {
         RemoteController remoteController = new RemoteController(
                 new PowerButton(),
                 new VolumeDownButton(),
-                new VolumeUpButton()
+                new VolumeUpButton(),
+                new ChannelDownButton(),
+                new ChannelUpButton()
         );
+
+        AirConditionerController airConditionerController = new AirConditionerController(
+                new PowerButton(),
+                new TemperatureDownButton(),
+                new TemperatureUpButton()
+        );
+
+
 
 //        RemoteController remoteController = new RemoteController();까지 작성했을 경우에
         /*
@@ -90,11 +100,20 @@ public class Main {
         remoteController.onPressedVolumeUpButton();
         remoteController.onUpVolumeUpButton();
 
+        remoteController.onPressedChannelDownButton();
+        remoteController.onDownChannelDownButton();
+        remoteController.onPressedChannelUpButton();
+        remoteController.onUpChannelUpButton();
 
-
-
-
-
+        airConditionerController.onPressedPowerButton();
+        System.out.println();
+        airConditionerController.onPressedTemperatureDownButton();
+        airConditionerController.onDownTemperatureDownButton();
+        System.out.println();
+        airConditionerController.onPressedTemperatureUpButton();
+        airConditionerController.onUpTemperatureUpButton();
+        System.out.println();
+        airConditionerController.onPressedPowerButton();
 
     }
 }

@@ -7,8 +7,6 @@ package chapter0_basic;
 
  */
 
-
-
 import java.util.Scanner;
 
 public class Practice {
