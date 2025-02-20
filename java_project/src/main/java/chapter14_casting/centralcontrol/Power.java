@@ -7,6 +7,6 @@ package chapter14_casting.centralcontrol;
  */
 
 public interface Power {
-    public void on();
-    public void down();
+    void on();
+    void off();
 }

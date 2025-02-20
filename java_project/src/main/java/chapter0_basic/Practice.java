@@ -6,17 +6,12 @@ package chapter0_basic;
     오버라이딩의 조건 : 매개변수와 리턴 타입이 모두 같아야 함.
 
  */
-
 import java.util.Scanner;
 
 public class Practice {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-
-
-
 
     }
 }
